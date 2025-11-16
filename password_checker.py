@@ -1,4 +1,4 @@
-
+import string
 # password= input("Enter your password: ")
 
 while True:
@@ -24,6 +24,12 @@ while True:
     else:
             print("Password must not exceed 16 characters.")
             print("Enter a valid password.")
+
+print("Lowercase: " ,password.islower())
+print("Uppercase: ", password.isupper())
+print("Digit:     " ,password.isalnum())
+has_symbol = any(char in string.punctuation for char in password)
+print("Symbol:    ",has_symbol)
 
 
 
